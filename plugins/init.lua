@@ -15,6 +15,12 @@ return {
 
   ['ggandor/leap.nvim'] = {},
 
+  ['williamboman/mason.nvim'] = {
+    override_options = {
+          ensure_installed = { "pyright", "rust-analyzer", "mypy" }
+      }
+  },
+
   -- ["goolord/alpha-nvim"] = {
   --   disable = false,
   -- },

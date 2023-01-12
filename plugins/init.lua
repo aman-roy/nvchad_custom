@@ -11,8 +11,6 @@ return {
       end,
   },
 
-  ['github/copilot.vim'] = {},
-
   ['ggandor/leap.nvim'] = {},
 
   ['williamboman/mason.nvim'] = {
@@ -21,7 +19,15 @@ return {
       }
   },
 
-  -- ["goolord/alpha-nvim"] = {
-  --   disable = false,
-  -- },
+  ["goolord/alpha-nvim"] = {
+    disable = false,
+  },
+
+  ["Pocco81/auto-save.nvim"] = {
+    config = function ()
+      require("auto-save").setup {
+
+      }
+    end,
+  },
 }

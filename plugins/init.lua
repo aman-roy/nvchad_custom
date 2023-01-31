@@ -18,12 +18,14 @@ return {
   },
 
   -- Custom plugin
-  ['ggandor/leap.nvim'] = {},
+  ['ggandor/leap.nvim'] = {
+    config = function ()
+      require('leap').add_default_mappings()
+    end
+  },
   ["Pocco81/auto-save.nvim"] = {
     config = function ()
-      require("auto-save").setup {
-
-      }
+      require("auto-save").setup {}
     end,
   },
   ["CRAG666/code_runner.nvim"] = {
@@ -40,4 +42,10 @@ return {
       })
       end
     },
+  ["kdheepak/lazygit.nvim"] = {},
+  ["iamcco/markdown-preview.nvim"] = {
+    run = function ()
+      vim.fn["mkdp#util#install"]()
+    end,
+  },
 }

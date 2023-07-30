@@ -6,7 +6,7 @@ M.custom = {
     ["<leader>r"] = { ":RunCode<CR>", "Run code based on file type" },
 
     -- LazyGit Config
-    ["<leader>gg"] = { ":LazyGit<CR>", "Start LazyGit" },
+    ["<leader>gg"] = { ":LazyGit", "Start LazyGit" },
 
 
     -- Copied From ThePrimeagen init.lua repo
@@ -15,6 +15,7 @@ M.custom = {
     ["<C-u>"] = { "<C-u>zz", "Move half page up and center page" },
     ["n"] = {"nzzzv", "Keep search matches in the middle of the window"},
     ["N"] = {"Nzzzv", "Keep search matches in the middle of the window"},
+    ["<leader>cc"] = {":CarbonNow<CR>", "Take screenshot"},
   },
 
   v = {

@@ -2,7 +2,7 @@ local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local servers = {'pyright', 'rust_analyzer'}
+local servers = {'pyright', 'rust_analyzer', 'gopls'}
 
 local flags = {
     allow_incremental_sync = true,
@@ -39,4 +39,16 @@ lspconfig.rust_analyzer.setup({
             },
         },
     },
+})
+
+lspconfig.gopls.setup({
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+      gofumpt = true,
+    },
+  },
 })
